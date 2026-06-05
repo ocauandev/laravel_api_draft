@@ -11,5 +11,12 @@ Route::get('/status', function () {
 
 
 Route::get('/welcome',[MainController::class, 'welcome']);
-Route::get('/current-time',[MainController::class, 'currentTime']);
-Route::get('/current-date',[MainController::class, 'currentDate']);
+Route::get('/time',[MainController::class, 'currentTime']);
+Route::get('/date',[MainController::class, 'currentDate']);
+
+Route::get('/greet/{name}', [MainController::class, 'greetClient']);
+Route::post('/sum', [MainController::class, 'sum']);
+Route::post('/store-contact', [MainController::class, 'storeContact']);
+Route::get('/get-contacts', [MainController::class, 'getContacts']);
+Route::get('/clear-contacts', [MainController::class, 'clearContacts']);
+
